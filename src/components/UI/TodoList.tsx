@@ -52,18 +52,12 @@ const TodoList: React.FC = () => {
       setOpenChildTodos([]);
     }
    else{
-    console.log("AAA",parentId)
-    console.log("open",openChildTodos)
     setOpenChildTodos((prevOpenChildTodos) => {
-      // Check if the parent ID is already in the openChildTodos array
       const isOpen = prevOpenChildTodos.includes(parentId);
 
       if (isOpen) {
-        // If already open, remove the parent ID from the array to close the sublist
         return prevOpenChildTodos.filter((id) => id !== parentId);
       } else {
-        // If not open, add the parent ID to the array to open the sublist
-        // return [...prevOpenChildTodos, parentId];
         return [parentId];
       }
     });}
@@ -82,12 +76,10 @@ const TodoList: React.FC = () => {
 
   const handleAddChildTodo: SubmitHandler<ChildInputs> = (data) => {
     resetChild();
-    // if (childTodo.trim() !== '') {
       const newChildTodo: ChildTodo = {
         childId: Math.random(),
         childTodo: data.childTodo,
       };
-      // resetChild();
       setTodos((prevTodos) =>
         prevTodos.map((todo) => {
           if (todo.id === data.parentId) {
@@ -99,11 +91,9 @@ const TodoList: React.FC = () => {
           return todo;
         })
       );
-      console.log("todo",todos)
         
      
-    // }
-  };
+   };
 
   const handleRemoveTodo = (id: number) => {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
@@ -127,7 +117,6 @@ const TodoList: React.FC = () => {
 
   return (
     <div className={homeStyles.pageWrapper}>
-        {/* {console.log("tod",todos)} */}
       <div className={styles.innerWrapper}>
       <h1>Hello {user?.email},</h1>
       <h2>Your Todo List</h2>

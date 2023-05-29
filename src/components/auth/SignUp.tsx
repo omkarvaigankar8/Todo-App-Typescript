@@ -18,18 +18,15 @@ const SignUp: React.FC = () => {
     const { setUser } = useContext(UserData);
     const navigate = useNavigate();
     const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
-    const onSubmit: SubmitHandler<Inputs> = data => {console.log(data)
-    
+    const onSubmit: SubmitHandler<Inputs> = data => {
         createUserWithEmailAndPassword(auth, data.email, data.password)
             .then((userCredential) => {
                 toast("Account Created & Logged In Redirect to Dashboard!");
-                console.log(userCredential);
-                // navigate('./home')
+           
                 setUser(userCredential?.user);
             })
             .catch((error) => {
                 toast(`${error.message}`);
-                console.log('error', error);
             });
     
     };

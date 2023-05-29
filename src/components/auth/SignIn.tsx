@@ -23,17 +23,13 @@ const SignIn: React.FC = () => {
          signInWithEmailAndPassword(auth, data.email, data.password)
             .then((userCredential) => {
                 toast(`Logged In Successfully`)
-                console.log(userCredential);
+              
                 const userD = {...userCredential?.user}
                 setItem('user',userD)
                 setUser(userCredential?.user)
-                // setTimeout(()=>{
-                // navigate('./home')
-                // },2000)
-            })
+              })
             .catch((error) => {
                 toast(`${error.message}`);
-                console.log('error', error);
             });
     
     };

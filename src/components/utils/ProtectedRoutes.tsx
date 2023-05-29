@@ -1,6 +1,5 @@
 import { Navigate, Outlet } from "react-router-dom";
-import { useContext, useEffect } from 'react';
-import { UserData } from '../store/UserData';
+import { useEffect } from 'react';
 import { getItem } from "./localStorage";
 
 const useAuth = () => {

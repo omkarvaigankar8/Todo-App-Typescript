@@ -3,7 +3,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../../firebase';
 import { useContext } from 'react';
 import { UserData } from '../store/UserData';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { removeItem } from '../utils/localStorage';
 import homeStyles from '../../App.module.scss'
 
