@@ -1,0 +1,104 @@
+.innerWrapper {
+    width: 95%;
+
+}
+
+.parentList {
+    list-style: none;
+    padding: 0;
+
+    li {
+        // background-color: aqua;
+        border: 1px solid black;
+        margin-bottom: 1rem;
+    }
+
+    .parentTodo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        // margin-bottom: 1rem;
+        padding-right: 1rem;
+
+        .para {
+            width: 100%;
+            padding: 1rem;
+            // border: 1px solid #ccc;
+            margin: 0;
+        }
+    }
+
+    .childList {
+        list-style: none;
+        padding: 0;
+
+        li {
+            // width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // gap: 1rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+            border: none;
+
+            border-bottom: 1px solid black;
+            // border: none;
+
+            .childPara {
+                width: 100%;
+            }
+
+            .childIcon {
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
+.formWrapper {
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .inputWrapper {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        span {
+            margin-top: 1rem;
+        }
+    }
+
+    input {
+        margin-bottom: 0;
+        background-color: inherit;
+        width: 95%;
+
+        @media only screen and (max-width: 768px) {
+            max-width: unset;
+            width: unset;
+        }
+    }
+}
+
+.ChildForm {
+    justify-content: flex-start;
+    margin: 2rem;
+
+    @media only screen and (max-width: 768px) {
+        width: unset;
+        margin: 1rem;
+    }
+
+}

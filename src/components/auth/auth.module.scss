@@ -1,0 +1,40 @@
+.innerWrapper {
+    margin-top: 5rem;
+    box-shadow: 9px 7px 9px 7px #f8f8f8;
+    border-radius: 1rem;
+    min-width: 30rem;
+    max-height: 30rem;
+    // background: aquamarine;
+    display: flex;
+    flex-direction: column;
+
+    // justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: 768px) {
+        // box-shadow: none;
+        border-radius: none;
+        min-width: 80%;
+        // max-height: unset;
+    }
+
+    .formWrapper {
+        margin-top: 2rem;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1.125rem;
+
+
+        .submitButton {
+            padding: 1.125rem;
+            min-width: 8rem;
+            font-size: 1rem;
+        }
+
+
+
+    }
+}
